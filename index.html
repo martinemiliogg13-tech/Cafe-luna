@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Luna · Cafetería</title>
+  <meta name="description" content="Café Luna: café recién preparado, croissants y tarta casera del día. Abierto de lunes a sábado, de 8:00 a 20:00.">
+  <meta name="theme-color" content="#14183a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__texto">
+      <h1>Café Luna</h1>
+      <p>Café recién preparado, bollería del día y tarta casera. Tu rincón favorito para parar un rato.</p>
+      <a class="boton" href="#visitanos">Cómo llegar</a>
+    </div>
+    <div class="luna" role="img" aria-label="Luna creciente"></div>
+  </header>
+
+  <main>
+    <section class="carta" aria-labelledby="titulo-carta">
+      <h2 id="titulo-carta">Nuestra carta</h2>
+
+      <h3>Para beber</h3>
+      <ul class="lista">
+        <li>
+          <div class="fila"><span class="nombre">Café</span><span class="puntos" aria-hidden="true"></span><span class="precio">1,50 €</span></div>
+          <p>Recién preparado.</p>
+        </li>
+      </ul>
+
+      <h3>Para acompañar</h3>
+      <ul class="lista">
+        <li>
+          <div class="fila"><span class="nombre">Croissant</span><span class="puntos" aria-hidden="true"></span><span class="precio">2,00 €</span></div>
+          <p>Recién horneado.</p>
+        </li>
+        <li>
+          <div class="fila"><span class="nombre">Tarta</span><span class="puntos" aria-hidden="true"></span><span class="precio">3,00 €</span></div>
+          <p>Casera, la del día.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="visita" id="visitanos" aria-labelledby="titulo-visita">
+      <h2 id="titulo-visita">Visítanos</h2>
+      <address>
+        <p>Calle Principal 123</p>
+        <p><a href="tel:+34600000000">600 000 000</a></p>
+      </address>
+      <dl class="horario">
+        <dt>Lunes a sábado</dt>
+        <dd>8:00 – 20:00</dd>
+        <dt>Domingo</dt>
+        <dd>Cerrado</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Café Luna</p>
+  </footer>
+
+</body>
+</html>
