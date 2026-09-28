@@ -1,0 +1,164 @@
+/* ---------- Variables ---------- */
+:root {
+  --noche: #14183a;
+  --luna: #f2d98d;
+  --niebla: #e8ecf4;
+  --cafe: #7a4a2b;
+  --texto: #1d2033;
+  --fuente: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--niebla);
+}
+
+h1, h2, h3 { line-height: 1.1; margin: 0; }
+p { margin: 0; }
+
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--cafe); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Cabecera ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(3rem, 10vw, 7rem) clamp(1.5rem, 8vw, 6rem);
+  background: var(--noche);
+  color: #fff;
+}
+
+.hero__texto { max-width: 34rem; }
+
+.hero h1 {
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  margin: 1.25rem 0 2rem;
+  color: #c9cde3;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  background: var(--luna);
+  color: var(--noche);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.boton:hover { background: #fff; }
+.hero .boton:focus-visible { outline-color: #fff; }
+
+/* Luna creciente hecha solo con CSS */
+.luna {
+  position: relative;
+  flex: none;
+  width: clamp(120px, 26vw, 280px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--luna);
+}
+.luna::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--noche);
+  transform: translate(24%, -10%);
+}
+
+/* ---------- Secciones ---------- */
+.carta, .visita {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 800;
+  color: var(--noche);
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cafe);
+}
+
+/* ---------- Carta ---------- */
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista li { padding: 0.75rem 0; }
+
+.fila {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.nombre { font-weight: 600; }
+.precio { font-weight: 600; white-space: nowrap; }
+
+.puntos {
+  flex: 1;
+  border-bottom: 2px dotted #9aa0bd;
+  transform: translateY(-0.3em);
+}
+
+.lista p { color: #545a78; font-size: 1rem; }
+
+/* ---------- Visítanos ---------- */
+.visita { border-top: 1px solid #c5cbdd; }
+
+address { font-style: normal; margin-bottom: 1.5rem; }
+
+.horario {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1.5rem;
+  margin: 0;
+}
+.horario dt { font-weight: 600; }
+.horario dd { margin: 0; }
+
+/* ---------- Pie ---------- */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  background: var(--noche);
+  color: #c9cde3;
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 600px) {
+  .hero { flex-direction: column-reverse; align-items: flex-start; }
+}
